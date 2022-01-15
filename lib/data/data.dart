@@ -21,7 +21,7 @@ export 'response/history/order_history_complete_response.dart';
 export 'response/history/order_history_delivery_response.dart';
 export 'response/history/order_history_detail_response.dart';
 export 'response/history/order_history_detail_response.dart';
-//response
+//models
 export 'response/home/productCategories/product_categories_response.dart';
 export 'response/home/slide_banner/slide_banner_response.dart';
 export 'response/maintenance/maintenance_response.dart';

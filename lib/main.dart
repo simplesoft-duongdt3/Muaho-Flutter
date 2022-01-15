@@ -28,6 +28,7 @@ import 'package:muaho/presentation/search/search_shop/ui/search_shop.dart';
 import 'package:muaho/presentation/voucher_list/ui/voucher_list_screen.dart';
 
 import 'common/di.dart';
+import 'features/gift_management/presentation/ui/gift_management_screen.dart';
 import 'presentation/chat-support/chat_support.dart';
 
 int startTime = 0;
@@ -77,7 +78,7 @@ class MyApp extends StatelessWidget {
           builder: (context, state) {
             return _buildMaterialApp(
                 context,
-                MainScreen.routeName,
+                GiftManagementScreen.routeName,
                 state is ChangeThemeState && state.isDark
                     ? MyTheme.darkTheme
                     : MyTheme.lightTheme);
@@ -132,6 +133,12 @@ class MyApp extends StatelessWidget {
           final args = settings.arguments as OrderDetailArgument;
           return MaterialPageRoute(builder: (context) {
             return OrderDetail(argument: args);
+          });
+        }
+        if (settings.name == GiftManagementScreen.routeName) {
+          final args = settings.arguments as GiftManagementArgument;
+          return MaterialPageRoute(builder: (context) {
+            return GiftManagementScreen(argument: args);
           });
         }
       },
